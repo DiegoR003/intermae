@@ -276,10 +276,38 @@
                     <div class="porto-carousel owl-carousel has-ccols ccols-xl-6 ccols-lg-4 ccols-md-3 ccols-sm-3 ccols-3" data-plugin-options='{"stagePadding":0,"margin":40,"autoplay":"yes","autoplayTimeout":5000,"items":6,"lg":4,"md":3,"sm":3,"xs":3,"nav":false,"dots":false}'>
                         <div class="owl-item"><img src="assets/img/logos-clientes/almer.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 1"></div>
                         <div class="owl-item"><img src="assets/img/logos-clientes/ultralam.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 2"></div>
-                        <div class="owl-item"><img src="assets/img/logos-clientes/logo-socio-3.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 3"></div>
-                        <div class="owl-item"><img src="assets/img/logos-clientes/logo-socio-4.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 4"></div>
-                        <div class="owl-item"><img src="assets/img/logos-clientes/logo-socio-5.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
-                        <div class="owl-item"><img src="assets/img/logos-clientes/logo-socio-6.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/3m.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 3"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/barcel.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 4"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/berel.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/cebra-forestal.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/cfe.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 1"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/coca-cola.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 2"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/cie-automotive.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 3"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/cruz-maderas.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 4"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/cuprum.webp" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/dos-pilares.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/envases-universales.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 1"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/gavilan.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 2"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/gobierno-mexico.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 3"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/huawei.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 4"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/interpuertp-monterrey.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/isri.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                         <div class="owl-item"><img src="assets/img/logos-clientes/cuprum.webp" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/local-nacional.webp" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/maderas-torres.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 1"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/mirage.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 2"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/multi-maderas.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 3"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/huawei.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 4"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/p&g.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/pemex.svg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/prologistics.avif" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                         <div class="owl-item"><img src="assets/img/logos-clientes/royal-group.jpg" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 5"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/solistica.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 6"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/telmex.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 1"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/tmm.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 2"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/usg.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 3"></div>
+                        <div class="owl-item"><img src="assets/img/logos-clientes/zte.png" style="margin: 0 20px 0 20px;" class="img-responsive" alt="Socio 4"></div>
+                        
                     </div>
                 </div>
             </div>

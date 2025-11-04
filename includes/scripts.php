@@ -15,7 +15,7 @@
 
 <script data-optimized="1" src="assets/js/wpbakery.js"></script>
 
-<script data-optimized="1" src="assets.js/contact-form-7.js"></script>
+<script data-optimized="1" src="assets/js/contact-form-7.js"></script>
 <script id="contact-form-7-js-extra">
     /* Esta variable es necesaria para que funcione el form */
     var wpcf7 = {"api":{"root":"...","namespace":"..."},"cached":"1"};
