@@ -1,57 +1,265 @@
- /* --- Tipografías --- */
-        .titulo-principal, .titulo-seccion, h1, h2 {
-            font-family: 'League Spartan', 'Bebas Neue', sans-serif;
-            font-weight: 700;
-        }
-        body, p, h4, .subtitulo-principal, .texto-seccion, .stats-text, .tarjeta-servicio p, .form-control {
-            font-family: 'Poppins', 'Montserrat', sans-serif;
-        }
+ /* ============================================
+ESTILOS PERSONALIZADOS INTERMAE (Versión Corregida)
+============================================
+*/
 
-        /* --- Colores INTERMAE --- */
-        .hero-intermae {
-            /* Overlay con tu Verde Oscuro sobre la imagen de fondo */
-            background-image: linear-gradient(rgba(11, 42, 20, 0.75), rgba(11, 42, 20, 0.75)), url('assets/img/hero-camion-intermae.jpg');
-            background-position: center center !important;
-            background-size: cover !important;
-        }
-        
-        /* --- Botones --- */
-        .btn-dorado {
-            background-color: #CBA865 !important; /* Dorado */
-            color: #0B2A14 !important; /* Verde Oscuro */
-            font-weight: 600 !important;
-            border-radius: 35px !important;
-            padding: 13px 35px !important;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-        }
-        .btn-dorado:hover {
-            background-color: #FFFFFF !important; /* Blanco al pasar el mouse */
-            color: #0B2A14 !important;
-        }
+/* --- 1. Fuentes y Colores Base --- */
+:root {
+    --verde-oscuro: #0B2A14;
+    --verde-militar: #1F4624;
+    --dorado: #CBA865;
+    --negro-oscuro: #1B1B1B;
+    --blanco: #FFFFFF;
+}
 
-        /* --- Títulos y Textos --- */
-        .titulo-principal { color: #FFFFFF; font-size: 4.2em; }
-        .subtitulo-principal { color: #FFFFFF; font-size: 1.5em; }
-        .titulo-seccion { color: #0B2A14; font-size: 32px; }
-        
-        /* --- Bloque 2 (Servicios y Stats) --- */
-        .seccion-oscura { background-color: #1B1B1B; } /* Negro/Gris Oscuro */
-        .tarjeta-servicio h4 a { color: #0B2A14 !important; font-weight: 600; }
-        .stats-block .stats-number { color: #FFFFFF !important; }
-        .stats-block .stats-text { color: #FFFFFF !important; }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f4f4f4; /* Fondo gris claro por defecto */
+}
 
-        /* --- Bloque 3 y 4 (Sobre Nosotros) --- */
-        .seccion-blanca { background-color: #FFFFFF; }
-        .seccion-gris-claro { background-color: #f4f4f4; }
-        .separador-dorado hr { background-color: #CBA865;  height: 4px; }
-        .check-verde { color: #5E7C41 !important; font-size: 22px !important; } /* Verde Oliva */
+h1, h2, h3, h4, .titulo-principal, .titulo-seccion {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
 
-        /* --- Bloque 5 (Formulario) --- */
-        .seccion-verde-principal { background-color: #0B2A14; } /* Verde Oscuro */
-        .seccion-verde-principal h2,
-        .seccion-verde-principal h4 { color: #FFFFFF; }
-        .form-control::placeholder { color: #6c757d; }
+/* --- 2. Header (¡NUEVO!) --- */
+.header-top-bar {
+    background-color: var(--verde-militar);
+    color: var(--blanco);
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+.header-main {
+    background-color: var(--blanco);
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 10;
+    position: relative; /* Para que esté sobre el margen negativo */
+}
+.header-main .navbar-nav .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--verde-oscuro); /* Texto oscuro */
+    margin: 0 0.5rem;
+}
+.header-main .navbar-nav .nav-link.active,
+.header-main .navbar-nav .nav-link:hover {
+    color: var(--dorado);
+}
+.header-main .header-search i {
+    font-size: 1.2rem;
+    color: var(--verde-oscuro);
+    cursor: pointer;
+}
+
+/* --- 3. Botones --- */
+.btn-dorado {
+    background-color: var(--dorado) !important;
+    color: var(--verde-oscuro) !important;
+    font-weight: 600 !important;
+    border-radius: 35px !important;
+    padding: 12px 35px !important;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-dorado:hover {
+    background-color: var(--blanco) !important;
+    color: var(--verde-oscuro) !important;
+    transform: translateY(-2px);
+}
+
+/* --- 4. Sección Héroe (MODIFICADO) --- */
+.hero-intermae {
+    background-image: linear-gradient(rgba(11, 42, 20, 0.75), rgba(11, 42, 20, 0.75)), url('assets/img/1.jpg');
+    background-position: center center;
+    background-size: cover;
+    
+    height: 70vh; /* Altura reducida, ya que el header no se encimA */
+    display: flex;
+    align-items: center;
+    
+    color: var(--blanco);
+    position: relative; /* Para que se ponga detrás del margen negativo */
+}
+.hero-intermae h1 {
+    font-size: 4.5rem;
+}
+.hero-intermae h4 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* --- 5. Sección Servicios (¡MODIFICADO!) --- */
+.seccion-oscura {
+    background-color: var(--negro-oscuro);
+    color: var(--blanco);
+    padding: 80px 0;
+    
+    /* ¡¡AQUÍ ESTÁ EL TRUCO QUE QUERÍAS!! */
+    margin-top: -150px; /* Ajusta este número (ej. -200px) */
+    
+    position: relative;
+    z-index: 5; /* Se pone encima del héroe */
+}
+.tarjeta-servicio {
+    background-color: var(--blanco);
+    color: #333;
+    padding: 0; /* Quitamos padding para que la imagen pegue arriba */
+    border-radius: 5px;
+    height: 100%;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.tarjeta-servicio .tarjeta-contenido {
+    padding: 25px;
+}
+.tarjeta-servicio h4 {
+    color: var(--verde-oscuro);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.tarjeta-servicio h4::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+/* --- 6. Sección Estadísticas --- */
+.stats-block {
+    text-align: center;
+    margin-top: 50px;
+}
+.stats-block .stats-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--blanco);
+}
+.stats-block .stats-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* --- 7. Separador Dorado --- */
+.separador-dorado {
+    width: 50px;
+    height: 4px;
+    background-color: var(--dorado);
+    margin-top: 15px;
+}
+
+/* --- 8. Sección Blanca (Sobre Nosotros) --- */
+.seccion-blanca {
+    padding: 80px 0;
+    background-color: var(--blanco);
+}
+.lista-iconos {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.lista-iconos .check-verde {
+    color: var(--verde-militar);
+}
+
+/* --- 9. Sección Gris (Cobertura) --- */
+.seccion-gris {
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+.imagen-con-gradiente {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.imagen-con-gradiente .texto-superpuesto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    background: linear-gradient(45deg, #c0392b, #f39c12); /* Gradiente rojo/naranja */
+    color: var(--blanco);
+    padding: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.imagen-con-gradiente .texto-superpuesto p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* --- 10. Sección Verde (Formulario) --- */
+.seccion-verde-principal {
+    padding: 80px 0;
+    background-color: var(--verde-oscuro);
+}
+.formulario-cotizacion .form-control {
+    background-color: var(--blanco);
+    border: none;
+    padding: 12px 15px;
+}
+.formulario-cotizacion .form-control::placeholder {
+    color: #6c757d;
+}
+.formulario-cotizacion .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(203, 168, 101, 0.4);
+    border-color: var(--dorado);
+}
+
+/* --- 11. Sección Logos --- */
+.seccion-logos {
+    padding: 60px 0;
+    background-color: var(--blanco);
+}
+.seccion-logos .owl-item img {
+    max-height: 70px;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.seccion-logos .owl-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* --- 12. Footer --- */
+.footer-main {
+    background-color: var(--negro-oscuro);
+    color: #ccc;
+    padding: 60px 0;
+}
+.footer-main .titulo-seccion {
+    color: var(--blanco);
+    margin-bottom: 20px;
+}
+.footer-main a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-main a:hover {
+    color: var(--dorado);
+}
+.footer-main .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+.footer-bottom {
+    background-color: #111;
+    color: #888;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+
 
 /*
 ============================================

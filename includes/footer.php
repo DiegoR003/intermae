@@ -1,76 +1,54 @@
-</div><div class="footer-wrapper" style="background-color: #1B1B1B;"> <div id="footer" class="footer-1">
-                <div class="footer-main">
-                    <div class="container">
-                        <div class="row">
-                            
-                            <div class="col-lg-5">
-                                <img src="assets/img/logo-intermae-blanco.png" alt="INTERMAE Logo" style="max-width: 190px; margin-bottom: 20px;">
-                                <p style="color: #ccc;">
-                                    Somos una empresa mexicana especializada en transporte, manejo de contenedores, patios, almacenes y custodia de mercancías.
-                                </p>
-                                </div>
-                            
-                            <div class="col-lg-4">
-                                <aside id="contact-info-widget-2" class="widget contact-info">
-                                    <h3 class="widget-title" style="color: #fff;">Contacto</h3>
-                                    <div class="contact-info">
-                                        <ul class="contact-details list list-icons" style="color: #ccc;">
-                                            <li><i class="far fa-dot-circle"></i> <strong>Dirección:</strong> <span>Tu Dirección, Ciudad, Estado</span></li>
-                                            <li><i class="fab fa-whatsapp"></i> <strong>Teléfono:</strong> <span>+52 123 456 7890</span></li>
-                                            <li><i class="far fa-envelope"></i> <strong>Email:</strong> <span><a href="mailto:info@intermae.com">info@intermae.com</a></span></li>
-                                        </ul>
-                                    </div>
-                                </aside>
-                            </div>
-                            
-                            <div class="col-lg-3">
-                                <aside id="block-widget-3" class="widget widget-block">
-                                    <h3 class="widget-title" style="color: #fff;">Menú</h3>
-                                    <div class="wpb_wrapper">
-                                        <ul style="list-style: none; padding-left: 0;">
-                                            <li><strong><a href="index.php">Inicio</a></strong></li>
-                                            <li><strong><a href="servicios.php">Servicios</a></strong></li>
-                                            <li><strong><a href="nosotros.php">Nosotros</a></strong></li>
-                                            <li><strong><a href="contacto.php">Contacto</a></strong></li>
-                                        </ul>
-                                    </div>
-                                </aside>
-                            </div>
-
-                        </div>
-                    </div>
+</main> <footer style="background-color: var(--negro-oscuro); color: #ccc; padding: 60px 0;">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="assets/img/logo-intermae-blanco.png" alt="INTERMAE Logo Blanco" style="max-width: 190px; margin-bottom: 20px;">
+                    <p>
+                        Somos una empresa mexicana especializada en transporte, manejo de contenedores, patios, almacenes y custodia de mercancías.
+                    </p>
                 </div>
+                
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="titulo-seccion" style="color: var(--blanco); margin-bottom: 20px;">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Tu Dirección, Ciudad, Estado</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +52 123 456 7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> <a href="mailto:info@intermae.com" style="color: #ccc; text-decoration: none;">info@intermae.com</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5 class="titulo-seccion" style="color: var(--blanco); margin-bottom: 20px;">Menú</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.php" style="color: #ccc; text-decoration: none;">Inicio</a></li>
+                        <li class="mb-2"><a href="servicios.php" style="color: #ccc; text-decoration: none;">Servicios</a></li>
+                        <li class="mb-2"><a href="nosotros.php" style="color: #ccc; text-decoration: none;">Nosotros</a></li>
+                        <li class="mb-2"><a href="contacto.php" style="color: #ccc; text-decoration: none;">Contacto</a></li>
+                    </ul>
+                </div>
+
             </div>
-	
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="footer-left">
-                        <span class="footer-copyright">
-                            © Copyright <?php echo date("Y"); ?>. INTERMAE TRANSLOGISTICS GROUP S.A. DE C.V.
-                        </span>
-                    </div>
-                    <div class="footer-right">
-                        </div>
+            <hr style="border-color: #555; margin-top: 40px;">
+            <div class="row">
+                <div class="col-12 text-center pt-3">
+                    <p style="font-size: 0.9rem;">&copy; <?php echo date("Y"); ?> INTERMAE TRANSLOGISTICS GROUP S.A. DE C.V. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
-					
-		
-	</div><div class="panel-overlay"></div>
-<div id="side-nav-panel" class="">
-	<a href="#" class="side-nav-panel-close"><i class="fas fa-times"></i></a>
-	<div class="menu-wrap">
-        <ul id="menu-main-menu-1" class="mobile-menu accordion-menu">
-            <li class="menu-item active"><a href="index.php">Inicio</a></li>
-            <li class="menu-item"><a href="servicios.php">Servicios</a></li>
-            <li class="menu-item"><a href="nosotros.php">Nosotros</a></li>
-            <li class="menu-item"><a href="contacto.php">Contacto</a></li>
-        </ul>
-    </div>
-</div>
+    </footer>
 
-<?php include 'includes/scripts.php'; ?>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/countup.js"></script> 
+
+    <script src="assets/js/app.js"></script>
 
 </body>
 </html>

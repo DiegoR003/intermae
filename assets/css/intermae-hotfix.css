@@ -1,0 +1,55 @@
+/* ---- HERO: imagen + overlay tipo referencia ---- */
+.hero-intermae{
+  --hero-img: url("assets/img/hero-camion.jpg"); /* <-- TU IMAGEN */
+  position: relative;
+  background: #0f1b22;
+  color: #fff;
+  padding: clamp(110px, 15vw, 180px) 0 120px; /* más alto para títulos grandes */
+  overflow: hidden;
+}
+.hero-intermae::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.65) 100%),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center right; /* mover camión a la derecha */
+  z-index:0;
+  transform: translateZ(0);
+}
+.hero-intermae > .container,
+.hero-intermae .row,
+.hero-intermae .col-lg-7{ position: relative; z-index: 1; }
+
+.hero-intermae .titulo-principal{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(40px, 7vw, 86px);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: .2px;
+  margin: 0 0 10px;
+}
+.hero-intermae .subtitulo-principal{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(16px, 2.4vw, 22px);
+  font-weight: 500;
+  opacity: .95;
+  margin-bottom: 28px;
+}
+
+/* Botones rojos */
+.btn-rojo{
+  display:inline-block; background:#CA2C2C; color:#fff!important;
+  border-radius:999px; padding:12px 24px; font-weight:700;
+  box-shadow:0 8px 22px rgba(202,44,44,.25);
+  transition:transform .15s ease, filter .2s ease;
+}
+.btn-rojo:hover{ transform:translateY(-1px); filter:brightness(1.03); }
+.btn-rojo.outline{ background:transparent; border:2px solid rgba(255,255,255,.9); }
+
+/* Navbar en tarjeta blanca flotante (opcional, como tu referencia) */
+.header-wrap, .nav-card{
+  background:#fff; border-radius:12px; padding:14px 22px;
+  box-shadow:0 8px 28px rgba(5,18,36,.12);
+}
