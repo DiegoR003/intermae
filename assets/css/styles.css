@@ -1,0 +1,86 @@
+ /* --- Tipografías --- */
+        .titulo-principal, .titulo-seccion, h1, h2 {
+            font-family: 'League Spartan', 'Bebas Neue', sans-serif;
+            font-weight: 700;
+        }
+        body, p, h4, .subtitulo-principal, .texto-seccion, .stats-text, .tarjeta-servicio p, .form-control {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+        }
+
+        /* --- Colores INTERMAE --- */
+        .hero-intermae {
+            /* Overlay con tu Verde Oscuro sobre la imagen de fondo */
+            background-image: linear-gradient(rgba(11, 42, 20, 0.75), rgba(11, 42, 20, 0.75)), url('assets/img/hero-camion-intermae.jpg');
+            background-position: center center !important;
+            background-size: cover !important;
+        }
+        
+        /* --- Botones --- */
+        .btn-dorado {
+            background-color: #CBA865 !important; /* Dorado */
+            color: #0B2A14 !important; /* Verde Oscuro */
+            font-weight: 600 !important;
+            border-radius: 35px !important;
+            padding: 13px 35px !important;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn-dorado:hover {
+            background-color: #FFFFFF !important; /* Blanco al pasar el mouse */
+            color: #0B2A14 !important;
+        }
+
+        /* --- Títulos y Textos --- */
+        .titulo-principal { color: #FFFFFF; font-size: 4.2em; }
+        .subtitulo-principal { color: #FFFFFF; font-size: 1.5em; }
+        .titulo-seccion { color: #0B2A14; font-size: 32px; }
+        
+        /* --- Bloque 2 (Servicios y Stats) --- */
+        .seccion-oscura { background-color: #1B1B1B; } /* Negro/Gris Oscuro */
+        .tarjeta-servicio h4 a { color: #0B2A14 !important; font-weight: 600; }
+        .stats-block .stats-number { color: #FFFFFF !important; }
+        .stats-block .stats-text { color: #FFFFFF !important; }
+
+        /* --- Bloque 3 y 4 (Sobre Nosotros) --- */
+        .seccion-blanca { background-color: #FFFFFF; }
+        .seccion-gris-claro { background-color: #f4f4f4; }
+        .separador-dorado hr { background-color: #CBA865;  height: 4px; }
+        .check-verde { color: #5E7C41 !important; font-size: 22px !important; } /* Verde Oliva */
+
+        /* --- Bloque 5 (Formulario) --- */
+        .seccion-verde-principal { background-color: #0B2A14; } /* Verde Oscuro */
+        .seccion-verde-principal h2,
+        .seccion-verde-principal h4 { color: #FFFFFF; }
+        .form-control::placeholder { color: #6c757d; }
+
+/*
+============================================
+ESTILOS PARA EL CARRUSEL DE LOGOS
+============================================
+*/
+
+/* 1. Prepara las "cajas" del carrusel */
+.porto-carousel .owl-item {
+    display: flex;           /* Activa flexbox */
+    align-items: center;     /* ¡Centra verticalmente! */
+    justify-content: center; /* Centra horizontalmente */
+    
+    /* Dales una altura mínima para que todo el carrusel se vea uniforme */
+    min-height: 120px;       /* Puedes ajustar este valor */
+}
+
+/* 2. Controla las imágenes de los logos */
+.porto-carousel .owl-item img {
+    /* ¡AQUÍ ESTÁ LA MAGIA! */
+    max-height: 80px;  /* Ajusta esta altura (ej. 70px, 90px) hasta que te guste */
+    
+    /* Deja que el ancho se ajuste solo para que no se deforme */
+    width: auto;
+    
+    /* Asegúrate de que no se desborde si es muy ancho */
+    max-width: 100%;
+    
+    /* Esto ayuda a centrarlo (aunque flex ya hizo el trabajo) */
+    margin: auto;
+    display: inline-block;
+}
