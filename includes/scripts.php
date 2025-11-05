@@ -6,6 +6,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+<script src="assets/js/app.js"></script>
 <script src="assets/js/countup.js"></script>
 
 
@@ -19,4 +20,3 @@
 <script data-optimized="1" src="assets/js/countup-loader.js"></script>
 <script data-optimized="1" src="assets/js/theme-script.js"></script>
 
-<script src="assets/js/app.js"></script>
