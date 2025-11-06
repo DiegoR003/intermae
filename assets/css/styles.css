@@ -1,0 +1,572 @@
+ :root {
+    --verde-oscuro: #0B2A14;
+    --verde-militar: #1F4624;
+    --dorado: #CBA865;
+    --negro-oscuro: #1B1B1B;
+    --blanco: #FFFFFF;
+}
+
+/* ===== HERO PRINCIPAL CON IMAGEN DE CAMIÓN ===== */
+.hero-principal-truck {
+    position: relative;
+    min-height: 700px;
+    background: url('assets/img/fletes/1.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: -200px; /* Espacio para las tarjetas superpuestas */
+    padding-bottom: 250px;
+}
+
+.hero-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Color de INTERMAE: Verde Oscuro y Verde Militar */
+    background: linear-gradient(135deg, rgba(11, 42, 20, 0.8) 0%, rgba(31, 70, 36, 0.1) 100%);
+}
+
+.hero-main-title {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-main-subtitle {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero-action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-hero-red {
+     /* Color de INTERMAE: Dorado */
+    background: linear-gradient(135deg, #CBA865 0%, #b8975a 100%);
+    color: #ffffff;
+    padding: 16px 45px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(203, 168, 101, 0.4);
+    border: none;
+}
+
+.btn-hero-red:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(203, 168, 101, 0.6);
+    background: linear-gradient(135deg, #b8975a 0%, #CBA865 100%);
+    color: #ffffff;
+}
+
+.btn-hero-red-outline {
+    background: transparent;
+    color: #ffffff;
+    padding: 16px 45px;
+    border: 2px solid #CBA865;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-red-outline:hover {
+    background: #CBA865;
+    color: #1F4624; 
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* ===== HERO EN CARRUSEL (aprovecha tu mismo estilo) ===== */
+.hero-carousel .carousel-item{
+  min-height:700px;
+}
+.hero-carousel .hero-slide{
+  position:relative;
+  min-height:700px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  margin-bottom:-200px;   /* igual que tu hero */
+  padding-bottom:250px;   /* igual que tu hero */
+  background: center center / cover no-repeat;
+}
+
+/* Reutilizamos tu overlay y títulos */
+.hero-carousel .hero-overlay-gradient{
+  position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(11,42,20,.8) 0%, rgba(31,70,36,.6) 100%);
+}
+
+/* Ajustes responsivos rápidos */
+@media (max-width: 991.98px){
+  .hero-carousel .carousel-item,
+  .hero-carousel .hero-slide{ min-height:520px; padding-bottom:180px; margin-bottom:-140px; }
+  .hero-main-title{ font-size:2.4rem; }
+  .hero-main-subtitle{ font-size:1.1rem; }
+  .btn-hero-red, .btn-hero-red-outline{ padding:12px 28px; font-size:1rem; }
+}
+
+/* Animaciones del contenido dentro del Hero */
+.hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .8s ease;
+}
+
+.hero-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .8s ease;
+}
+
+.hero-buttons.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===== SERVICIOS SUPERPUESTOS ===== */
+.services-overlap-section {
+    position: relative;
+    z-index: 10;
+    padding: 0 0 80px 0;
+    background: transparent;
+    /* 2. La jalamos hacia arriba para encimarla */
+    margin-top: -150px;
+    
+}
+
+.service-overlap-card {
+    background: #ffffff;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+    height: 100%;
+}
+
+.service-overlap-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+}
+
+.service-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+}
+
+.service-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-overlap-card:hover .service-image-container img {
+    transform: scale(1.15);
+}
+
+.service-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-overlap-card:hover .service-hover-overlay {
+    opacity: 1;
+}
+
+.read-more-btn {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+      /* Color de INTERMAE: Dorado */
+    background: linear-gradient(90deg, #CBA865 0%, #b8975a 100%);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+     background: linear-gradient(90deg, #CBA865 0%, #b8975a 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(203, 168, 101, 0.4);
+}
+
+.service-content-box {
+    padding: 35px 30px;
+    background: #ffffff;
+}
+
+.service-title-line {
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #CBA865 0%, #b8975a 100%);
+    margin-bottom: 20px;
+}
+
+.service-title-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-description {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ===== ESTADÍSTICAS ===== */
+.statistics-dark-section {
+    /* Color de INTERMAE: Verde Oscuro y Verde Militar */
+    background: #0B2A14; /* Tu verde oscuro sólido */
+    padding: 60px 0;
+}
+
+.stat-block-item {
+    padding: 20px;
+}
+
+.stat-big-number {
+    font-size: 4rem;
+    font-weight: 900;
+    /* Color de INTERMAE: Dorado */
+    color: #CBA865;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.stat-description {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+.seccion-blanca {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.seccion-gris {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.titulo-seccion {
+    font-size: 2.2rem;
+    font-weight: 800;
+    /* Color de INTERMAE: Verde Militar */
+    color: #1F4624;
+    margin-bottom: 10px;
+    
+}
+
+.separador-dorado {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #d4af37 0%, #c09220 100%);
+    margin: 20px 0;
+}
+
+.lista-iconos {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.check-verde {
+    color: #2c5f4f;
+    font-size: 1.2rem;
+}
+
+.lista-sectores {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-sectores li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.imagen-con-gradiente-box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.texto-superpuesto-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Color de INTERMAE: Verde Militar */
+    background: linear-gradient(to top, rgba(31, 70, 36, 0.95) 0%, transparent 100%);
+    padding: 40px 30px;
+    color: #ffffff;
+}
+
+.texto-superpuesto-box h5 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.texto-superpuesto-box p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== SECCIÓN COTIZACIÓN ===== */
+.seccion-verde-principal {
+    /* Color de INTERMAE: Verde Militar y Verde Oscuro */
+    background: linear-gradient(135deg, #1F4624 0%, #0B2A14 100%);
+    padding: 80px 0;
+}
+
+.titulo-blanco {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.subtitulo-blanco {
+    color: #f4f4f4;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.formulario-cotizacion-modern .form-control-custom {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.formulario-cotizacion-modern .form-control-custom:focus {
+    background: #ffffff;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+.formulario-cotizacion-modern .form-control-custom::placeholder {
+    color: #999;
+}
+
+.btn-dorado-form {
+     /* Color de INTERMAE: Dorado y Verde Militar */
+    background: linear-gradient(135deg, #CBA865 0%, #b8975a 100%);
+    color: #2c5f4f;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(203, 168, 101, 0.4);
+}
+
+.btn-dorado-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(203, 168, 101, 0.6);
+    background: linear-gradient(135deg, #b8975a 0%, #CBA865 100%);
+}
+
+/* ===== LOGOS CLIENTES ===== */
+.seccion-logos {
+    background: #ffffff;
+}
+
+.seccion-logos .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.seccion-logos .item img {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.seccion-logos .item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* Contenedor para posicionar el ícono */
+.input-wrap{
+  position: relative;
+}
+
+/* Altura uniforme de inputs (NO textarea) */
+.input-wrap .form-control.form-control-custom:not(textarea){
+  height: 56px;               /* ajusta si usas otra altura en tu diseño */
+  line-height: 56px;          /* ayuda a centrar placeholder visualmente */
+}
+
+/* Espacio para el ícono a la izquierda */
+.input-wrap .form-control.form-control-custom{
+  padding-left: 2.75rem !important; /* deja espacio para el ícono */
+}
+
+/* Ícono centrado verticalmente (inputs) */
+.form-icon{
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.15rem;
+  color: #9aa3a7;             /* gris suave */
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Caso especial: textarea (alinear en el borde superior) */
+.input-wrap.textarea .form-icon{
+  top: 1rem;                   /* o 0.9rem según tu padding */
+  transform: none;
+}
+
+/* Opcional: estados de foco coherentes */
+.input-wrap .form-control.form-control-custom:focus{
+  box-shadow: 0 0 0 4px rgba(203,168,101,0.15); /* halo dorado suave */
+  border-color: #CBA865;
+  outline: none;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-main-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-principal-truck {
+        min-height: 600px;
+        margin-bottom: -150px;
+        padding-bottom: 200px;
+    }
+    
+    .stat-big-number {
+        font-size: 3rem;
+    }
+    
+    .titulo-seccion {
+        font-size: 1.8rem;
+    }
+    
+    .titulo-blanco {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-principal-truck {
+        min-height: 550px;
+        margin-bottom: -100px;
+        padding-bottom: 150px;
+    }
+    
+    .hero-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-main-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-hero-red,
+    .btn-hero-red-outline {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .services-overlap-section {
+        padding: 0 0 50px 0;
+    }
+    
+    .service-image-container {
+        height: 220px;
+    }
+    
+    .seccion-blanca,
+    .seccion-gris,
+    .seccion-verde-principal {
+        padding: 50px 0;
+    }
+    
+    .stat-big-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 992px){
+  .navbar .dropdown:hover .dropdown-menu{
+    display:block;
+    margin-top:0;
+  }
+}

@@ -3,22 +3,110 @@
     include 'includes/header.php'; 
 ?>
 
-<!-- Hero Section con Imagen de Fondo -->
-<section class="hero-principal-truck">
-    <div class="hero-overlay-gradient"></div>
-    <div class="container position-relative">
+
+<!-- Hero Section: Carousel -->
+<section id="hero" class="hero-carousel">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause="false" data-bs-touch="true">
+    
+   <div class="carousel-inner">
+
+  <!-- Slide 1 -->
+  <div class="carousel-item active">
+    <div class="hero-slide" style="background-image:url('assets/img/fletes/1.jpg');">
+      <div class="hero-overlay-gradient"></div>
+      <div class="container position-relative">
         <div class="row">
-            <div class="col-lg-7 col-xl-6">
-                <h1 class="hero-main-title">INTERMAE TRANSLOGISTICS</h1>
-                <p class="hero-main-subtitle">Tu socio en Logística, Almacenaje y Transporte.</p>
-                <div class="hero-action-buttons">
-                    <a class="btn btn-hero-red me-3" href="servicios.php">Nuestros Servicios</a>
-                    <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
-                </div>
+          <div class="col-lg-7 col-xl-6">
+
+            <!-- CONTENIDO animado -->
+            <div class="hero-content">
+              <h1 class="hero-main-title">INTERMAE TRANSLOGISTICS GROUP S.A. DE C.V.</h1>
+              <p class="hero-main-subtitle">Tu socio en Logística, Almacenaje y Transporte.</p>
             </div>
+
+            <!-- BOTONES animados -->
+            <div class="hero-buttons hero-action-buttons">
+              <a class="btn btn-hero-red me-3" href="servicios.php">Nuestros Servicios</a>
+              <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
+            </div>
+
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="carousel-item">
+    <div class="hero-slide" style="background-image:url('assets/img/patio-contenedor/105.jpg');">
+      <div class="hero-overlay-gradient"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-7 col-xl-6">
+
+            <!-- CONTENIDO animado -->
+            <div class="hero-content">
+              <h1 class="hero-main-title">Patio de Contenedores y Almacén</h1>
+              <p class="hero-main-subtitle">Resguardo seguro, maniobras y evidencias en tiempo real.</p>
+            </div>
+
+            <!-- BOTONES animados -->
+            <div class="hero-buttons hero-action-buttons">
+              <a class="btn btn-hero-red me-3" href="servicios.php#patio">Ver Patio &amp; Almacén</a>
+              <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="carousel-item">
+    <div class="hero-slide" style="background-image:url('assets/img/custodia-monitoreo/monitoreo.jpg');">
+      <div class="hero-overlay-gradient"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-7 col-xl-6">
+
+            <!-- CONTENIDO animado -->
+            <div class="hero-content">
+              <h1 class="hero-main-title">Custodias & Monitoreo 24/7</h1>
+              <p class="hero-main-subtitle">GPS, protocolos de reacción y reportes al cliente.</p>
+            </div>
+
+            <!-- BOTONES animados -->
+            <div class="hero-buttons hero-action-buttons">
+              <a class="btn btn-hero-red me-3" href="servicios.php#custodias">Ver Custodias</a>
+              <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Controles 
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+</button> -->
+
+<!-- Indicadores -->
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+
+  </div>
 </section>
+
 
 <!-- Sección de Servicios Cards (Superpuestas) -->
 <section class="services-overlap-section">
@@ -28,7 +116,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-overlap-card">
                     <div class="service-image-container">
-                        <img src="assets/img/104.jpg" alt="Transporte Terrestre">
+                        <img src="assets/img/fletes/104.jpg" alt="Transporte Terrestre">
                         <div class="service-hover-overlay">
                             <a href="servicios.php#transporte" class="read-more-btn"> LEER MÁS</a>
                         </div>
@@ -45,7 +133,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-overlap-card">
                     <div class="service-image-container">
-                        <img src="assets/img/118.jpg" alt="Transporte Marítimo">
+                        <img src="assets/img/patio-contenedor/118.jpg" alt="Transporte Marítimo">
                         <div class="service-hover-overlay">
                             <a href="servicios.php#contenedores" class="read-more-btn">LEER MÁS</a>
                         </div>
@@ -62,7 +150,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="service-overlap-card">
                     <div class="service-image-container">
-                        <img src="assets/img/servicio-custodia.jpg" alt="Transporte Aéreo">
+                        <img src="assets/img/custodia-monitoreo/1.png" alt="Transporte Aéreo">
                         <div class="service-hover-overlay">
                             <a href="servicios.php#custodia" class="read-more-btn">LEER MÁS</a>
                         </div>
@@ -129,7 +217,7 @@
                 </div>
             </div>
             <div class="col-lg-5 text-center">
-                <img src="assets/img/intermae-servicios.jpg" class="img-fluid rounded shadow-lg" alt="Servicios de Logística">
+                <img src="assets/img/fletes/102.jpg" class="img-fluid  shadow-lg" alt="Servicios de Logística">
             </div>
         </div>
     </div>
@@ -141,10 +229,10 @@
         <div class="row align-items-center">
             <div class="col-lg-5 mb-4 mb-lg-0">
                 <div class="imagen-con-gradiente-box">
-                    <img src="assets/img/intermae-cobertura.jpg" class="img-fluid rounded" alt="Cobertura de Sectores">
+                    <img src="assets/img/banners/mapa.png" class="img-fluid " alt="Cobertura de Sectores">
                     <div class="texto-superpuesto-box">
-                        <h5 class="fw-bold mb-2">Book your Cargo</h5>
-                        <p class="mb-0">now & Your job just got a lot easier</p>
+                        <h5 class="fw-bold mb-2">Reserva tu carga ahora</h5>
+                        <p class="mb-0">Más que tu aliado comercial</p>
                     </div>
                 </div>
             </div>
@@ -172,34 +260,54 @@
                 <h2 class="titulo-blanco">Solicita un presupuesto gratuito para su carga.</h2>
                 <div class="separador-dorado"></div>
                 <h4 class="subtitulo-blanco mt-4">
-                    "Garantizamos un servicio calificado, seguro y a tiempo, con reportes y evidencias en tiempo real."
+                    <span class="typing-text" id="typing-text"></span>
+                    
                 </h4>
             </div>
             <div class="col-lg-7 ps-lg-5">
                 <form action="php/enviarCorreo.php" method="post" class="formulario-cotizacion-modern">
-                    <div class="row">
-                        <div class="col-lg-6 mb-3">
-                            <input type="text" class="form-control form-control-custom" name="your-name" placeholder="Su Nombre*" required>
-                        </div>
-                        <div class="col-lg-6 mb-3">
-                            <input type="text" class="form-control form-control-custom" name="your-email" placeholder="Tu Email o Teléfono*" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 mb-3">
-                            <input type="text" class="form-control form-control-custom" name="departure" placeholder="Origen" required>
-                        </div>
-                        <div class="col-lg-6 mb-3">
-                            <input type="text" class="form-control form-control-custom" name="arrival" placeholder="Destino" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control form-control-custom" name="your-message" rows="4" placeholder="Descripción de la Carga *" required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-dorado-form">Solicitar Presupuesto</button>
-                    </div>
-                </form>
+  <div class="row">
+    <div class="col-lg-6 mb-3">
+      <div class="input-wrap">
+        <i class="bi bi-person form-icon"></i>
+        <input type="text" class="form-control form-control-custom" name="your-name" placeholder="Su nombre*" required>
+      </div>
+    </div>
+
+    <div class="col-lg-6 mb-3">
+      <div class="input-wrap">
+        <i class="bi bi-telephone form-icon"></i>
+        <input type="text" class="form-control form-control-custom" name="your-email" placeholder="Tu correo electrónico o teléfono*" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-3">
+      <div class="input-wrap">
+        <i class="bi bi-airplane form-icon"></i>
+        <input type="text" class="form-control form-control-custom" name="departure" placeholder="Partida" required>
+      </div>
+    </div>
+
+    <div class="col-lg-6 mb-3">
+      <div class="input-wrap">
+        <i class="bi bi-geo-alt form-icon"></i>
+        <input type="text" class="form-control form-control-custom" name="arrival" placeholder="Llegada" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="input-wrap textarea">
+      <i class="bi bi-chat-dots form-icon"></i>
+      <textarea class="form-control form-control-custom" name="your-message" rows="5" placeholder="Descripción de la carga *" required></textarea>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-dorado-form">Solicitar Presupuesto</button>
+</form>
+
             </div>
         </div>
     </div>
@@ -227,526 +335,7 @@
     </div>
 </section>
 
-<style>
-    :root {
-    --verde-oscuro: #0B2A14;
-    --verde-militar: #1F4624;
-    --dorado: #CBA865;
-    --negro-oscuro: #1B1B1B;
-    --blanco: #FFFFFF;
-}
 
-/* ===== HERO PRINCIPAL CON IMAGEN DE CAMIÓN ===== */
-.hero-principal-truck {
-    position: relative;
-    min-height: 700px;
-    background: url('assets/img/1.jpg') center center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: -200px; /* Espacio para las tarjetas superpuestas */
-    padding-bottom: 250px;
-}
-
-.hero-overlay-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Color de INTERMAE: Verde Oscuro y Verde Militar */
-    background: linear-gradient(135deg, rgba(11, 42, 20, 0.8) 0%, rgba(31, 70, 36, 0.6) 100%);
-}
-
-.hero-main-title {
-    color: #ffffff;
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-
-.hero-main-subtitle {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-
-.hero-action-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn-hero-red {
-     /* Color de INTERMAE: Dorado */
-    background: linear-gradient(135deg, #CBA865 0%, #b8975a 100%);
-    color: #ffffff;
-    padding: 16px 45px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-     box-shadow: 0 4px 15px rgba(203, 168, 101, 0.4);
-    border: none;
-}
-
-.btn-hero-red:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(203, 168, 101, 0.6);
-    background: linear-gradient(135deg, #b8975a 0%, #CBA865 100%);
-    color: #ffffff;
-}
-
-.btn-hero-red-outline {
-    background: transparent;
-    color: #ffffff;
-    padding: 16px 45px;
-    border: 2px solid #CBA865;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-hero-red-outline:hover {
-    background: #CBA865;
-    color: #1F4624; 
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-}
-
-/* ===== SERVICIOS SUPERPUESTOS ===== */
-.services-overlap-section {
-    position: relative;
-    z-index: 10;
-    padding: 0 0 80px 0;
-    background: transparent;
-    /* 2. La jalamos hacia arriba para encimarla */
-    margin-top: -150px;
-    
-}
-
-.service-overlap-card {
-    background: #ffffff;
-    border-radius: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    box-shadow: 0 5px 30px rgba(0,0,0,0.15);
-    height: 100%;
-}
-
-.service-overlap-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
-}
-
-.service-image-container {
-    position: relative;
-    overflow: hidden;
-    height: 280px;
-}
-
-.service-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.service-overlap-card:hover .service-image-container img {
-    transform: scale(1.15);
-}
-
-.service-hover-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, transparent 100%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 25px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.service-overlap-card:hover .service-hover-overlay {
-    opacity: 1;
-}
-
-.read-more-btn {
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 1.5px;
-    padding: 10px 20px;
-      /* Color de INTERMAE: Dorado */
-    background: linear-gradient(90deg, #CBA865 0%, #b8975a 100%);
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.read-more-btn:hover {
-     background: linear-gradient(90deg, #CBA865 0%, #b8975a 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(203, 168, 101, 0.4);
-}
-
-.service-content-box {
-    padding: 35px 30px;
-    background: #ffffff;
-}
-
-.service-title-line {
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, #CBA865 0%, #b8975a 100%);
-    margin-bottom: 20px;
-}
-
-.service-title-text {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    line-height: 1.4;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.service-description {
-    color: #7f8c8d;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-/* ===== ESTADÍSTICAS ===== */
-.statistics-dark-section {
-    /* Color de INTERMAE: Verde Oscuro y Verde Militar */
-    background: #0B2A14; /* Tu verde oscuro sólido */
-    padding: 60px 0;
-}
-
-.stat-block-item {
-    padding: 20px;
-}
-
-.stat-big-number {
-    font-size: 4rem;
-    font-weight: 900;
-    /* Color de INTERMAE: Dorado */
-    color: #CBA865;
-    margin-bottom: 10px;
-    font-family: 'Arial Black', sans-serif;
-}
-
-.stat-description {
-    font-size: 0.9rem;
-    color: #bdc3c7;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-/* ===== SECCIONES GENERALES ===== */
-.seccion-blanca {
-    padding: 80px 0;
-    background: #ffffff;
-}
-
-.seccion-gris {
-    padding: 80px 0;
-    background: #f8f9fa;
-}
-
-.titulo-seccion {
-    font-size: 2.2rem;
-    font-weight: 800;
-    /* Color de INTERMAE: Verde Militar */
-    color: #1F4624;
-    margin-bottom: 10px;
-    
-}
-
-.separador-dorado {
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #d4af37 0%, #c09220 100%);
-    margin: 20px 0;
-}
-
-.lista-iconos {
-    font-size: 1.05rem;
-    color: #333;
-}
-
-.check-verde {
-    color: #2c5f4f;
-    font-size: 1.2rem;
-}
-
-.lista-sectores {
-    list-style: none;
-    padding: 0;
-}
-
-.lista-sectores li {
-    padding: 10px 0;
-    font-size: 1.05rem;
-    color: #333;
-}
-
-.imagen-con-gradiente-box {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-}
-
-.texto-superpuesto-box {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* Color de INTERMAE: Verde Militar */
-    background: linear-gradient(to top, rgba(31, 70, 36, 0.95) 0%, transparent 100%);
-    padding: 40px 30px;
-    color: #ffffff;
-}
-
-.texto-superpuesto-box h5 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-.texto-superpuesto-box p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* ===== SECCIÓN COTIZACIÓN ===== */
-.seccion-verde-principal {
-    /* Color de INTERMAE: Verde Militar y Verde Oscuro */
-    background: linear-gradient(135deg, #1F4624 0%, #0B2A14 100%);
-    padding: 80px 0;
-}
-
-.titulo-blanco {
-    color: #ffffff;
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.3;
-}
-
-.subtitulo-blanco {
-    color: #f4f4f4;
-    font-size: 1.3rem;
-    line-height: 1.7;
-    font-style: italic;
-}
-
-.formulario-cotizacion-modern .form-control-custom {
-    background: rgba(255, 255, 255, 0.95);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    padding: 15px 20px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.formulario-cotizacion-modern .form-control-custom:focus {
-    background: #ffffff;
-    border-color: #d4af37;
-    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
-}
-
-.formulario-cotizacion-modern .form-control-custom::placeholder {
-    color: #999;
-}
-
-.btn-dorado-form {
-     /* Color de INTERMAE: Dorado y Verde Militar */
-    background: linear-gradient(135deg, #CBA865 0%, #b8975a 100%);
-    color: #2c5f4f;
-    padding: 15px 50px;
-    border: none;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(203, 168, 101, 0.4);
-}
-
-.btn-dorado-form:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(203, 168, 101, 0.6);
-    background: linear-gradient(135deg, #b8975a 0%, #CBA865 100%);
-}
-
-/* ===== LOGOS CLIENTES ===== */
-.seccion-logos {
-    background: #ffffff;
-}
-
-.seccion-logos .item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.seccion-logos .item img {
-    max-width: 150px;
-    max-height: 80px;
-    object-fit: contain;
-    filter: grayscale(0%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.seccion-logos .item img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 991px) {
-    .hero-main-title {
-        font-size: 2.8rem;
-    }
-    
-    .hero-main-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .hero-principal-truck {
-        min-height: 600px;
-        margin-bottom: -150px;
-        padding-bottom: 200px;
-    }
-    
-    .stat-big-number {
-        font-size: 3rem;
-    }
-    
-    .titulo-seccion {
-        font-size: 1.8rem;
-    }
-    
-    .titulo-blanco {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .hero-principal-truck {
-        min-height: 550px;
-        margin-bottom: -100px;
-        padding-bottom: 150px;
-    }
-    
-    .hero-main-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-main-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .hero-action-buttons {
-        flex-direction: column;
-    }
-    
-    .btn-hero-red,
-    .btn-hero-red-outline {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .services-overlap-section {
-        padding: 0 0 50px 0;
-    }
-    
-    .service-image-container {
-        height: 220px;
-    }
-    
-    .seccion-blanca,
-    .seccion-gris,
-    .seccion-verde-principal {
-        padding: 50px 0;
-    }
-    
-    .stat-big-number {
-        font-size: 2.5rem;
-    }
-}
-</style>
-
-<script>
-// Animación de contadores
-document.addEventListener('DOMContentLoaded', function() {
-    const statNumbers = document.querySelectorAll('.stat-big-number');
-    
-    const animateCounter = (element) => {
-        const target = parseInt(element.getAttribute('data-count'));
-        const duration = 2000;
-        const step = target / (duration / 16);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-                element.textContent = target.toLocaleString();
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current).toLocaleString();
-            }
-        }, 16);
-    };
-    
-    // Intersection Observer para iniciar animación cuando sea visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    statNumbers.forEach(stat => observer.observe(stat));
-    
-    // Inicializar carruseles si Owl Carousel está disponible
-    if (typeof $.fn.owlCarousel !== 'undefined') {
-        $('#logos-carousel').owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: false,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: { items: 2 },
-                600: { items: 3 },
-                1000: { items: 5 }
-            }
-        });
-    }
-});
-</script>
 
 <?php 
     include 'includes/footer.php'; 
