@@ -12,9 +12,9 @@
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h5 class="titulo-seccion" style="color: var(--blanco); margin-bottom: 20px;">Contacto</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Tu Dirección, Ciudad, Estado</li>
+                       <!-- <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Tu Dirección, Ciudad, Estado</li>-->
                         <li class="mb-2"><i class="fas fa-phone me-2"></i> +52 314 100 3333</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> <a href="mailto:info@intermae.com" style="color: #ccc; text-decoration: none;">info@intermae.com</a></li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> <a href="mailto:info@intermae.com" style="color: #ccc; text-decoration: none;"> comercial@grupointermae.com</a></li>
                     </ul>
                 </div>
                 
@@ -54,6 +54,43 @@
 
     <script src="assets/js/app.js">
     </script>
+
+   <a href="#" id="scrollTopButton" class="scroll-to-top-btn" title="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+   
+    <script>
+        $(document).ready(function(){
+
+
+    // ===============================================
+    // CÓDIGO PARA FLECHA "VOLVER ARRIBA"
+    // ===============================================
+    
+    // Selecciona el botón
+    var scrollTopBtn = $('#scrollTopButton');
+
+    // Muestra/oculta el botón al hacer scroll
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) { // Si el scroll es mayor a 300px
+            scrollTopBtn.addClass('show');
+        } else {
+            scrollTopBtn.removeClass('show');
+        }
+    });
+
+    // Acción de clic (con scroll suave)
+    scrollTopBtn.click(function(e) {
+        e.preventDefault(); // Evita el salto brusco del <a>
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500); // 500ms para subir
+    });
+
+});
+ 
+    </script>
+    
 
 </body>
 </html>

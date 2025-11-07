@@ -570,3 +570,219 @@
     margin-top:0;
   }
 }
+
+/* ============================================
+   ARREGLOS RESPONSIVE (PARA MÓVIL)
+   ============================================ */
+
+/* Solo para pantallas medianas y más pequeñas (tablets y teléfonos) */
+@media (max-width: 991px) {
+
+    /* 1. ARREGLO PARA LAS TARJETAS ENCIMADAS */
+    
+    /* Hacemos que el héroe no "guarde" tanto espacio negativo */
+    .hero-principal-truck {
+         margin-bottom: -160px; /* (Antes era -200px) */
+         padding-bottom: 200px; /* (Antes era 250px) */
+    }
+
+    /* Hacemos que las tarjetas no "suban" tanto */
+    .services-overlap-section {
+        margin-top: -90px; /* (Antes era -150px) */
+        padding-top: 40px; 
+    }
+
+    /* * ¡LA MAGIA! 
+     * Trae tus botones (que están en el héroe) 
+     * al FRENTE de las tarjetas.
+    */
+    .hero-principal-truck .container {
+        position: relative;
+        z-index: 11; /* (Las tarjetas tienen z-index: 10) */
+    }
+}
+
+/* Solo para teléfonos muy pequeños (como el de tu captura) */
+@media (max-width: 575px) {
+    
+    /* 2. ARREGLO PARA EL CORREO ENCIMADO */
+    .header-top-bar .container {
+        flex-direction: column; /* Apila el teléfono y el email */
+        align-items: center;  /* Los centra */
+        padding-bottom: 5px;
+    }
+
+    .header-top-bar span.me-3 {
+         margin-right: 0 !important; /* Quita el margen entre ellos */
+         margin-bottom: 5px; /* Les da espacio vertical */
+    }
+}
+
+/* ============================================
+   ARREGLOS RESPONSIVE (PARA MÓVIL)
+   ============================================ */
+
+/* ... (Aquí va tu código de .hero-principal-truck y .services-overlap-section) ... */
+
+
+/* Solo para teléfonos muy pequeños (como el de tu captura) */
+@media (max-width: 575px) {
+    
+    /* 2. ARREGLO PARA EL CORREO ENCIMADO (¡EL BUENO!) */
+    
+    /* Hacemos que el .container se centre */
+    .header-top-bar .container {
+        justify-content: center !important; /* Centra el contenido */
+    }
+    
+    /* Le decimos al PRIMER <div> (el que tiene tu info) que apile su contenido */
+    .header-top-bar .container > div:first-child {
+        display: flex;
+        flex-direction: column; /* ¡La magia! Apila el tel y el email */
+        align-items: center;  /* Los centra bonitos */
+    }
+
+    /* Quitamos los márgenes laterales que estorban */
+    .header-top-bar span.me-3 {
+         margin-right: 0 !important; 
+         margin-bottom: 5px; /* Les da espacio vertical */
+    }
+}
+
+.metricas-intermae {
+  padding: 50px 0;
+  background-color: #133d24; /* mismo verde oscuro */
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.metric-text {
+  margin-top: 5px;
+  color: #ddd;
+}
+
+/* ============================================
+   1. ANIMACIÓN LÍNEA DORADA NAVBAR
+   ============================================ */
+
+/* Preparamos los enlaces del menú */
+.header-main .navbar-nav .nav-link {
+    position: relative; /* Necesario para que la línea de abajo se posicione bien */
+    padding-bottom: 10px; /* Damos un espacio para que la línea no se pegue al texto */
+    text-decoration: none;
+}
+
+/* Creamos la línea (oculta por defecto) */
+.header-main .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* La pegamos abajo del enlace */
+    left: 50%; /* La centramos */
+    transform: translateX(-50%); /* Ajuste fino de centrado */
+    
+    width: 0%; /* ANCHO 0% = Oculta */
+    height: 3px; /* Grosor de la línea */
+    
+    background-color: var(--dorado, #CBA865); /* Tu color dorado */
+    transition: width 0.3s ease-out; /* La animación */
+}
+
+/* La "magia" al pasar el mouse (hover) o si el enlace está activo */
+.header-main .navbar-nav .nav-link:hover::after,
+.header-main .navbar-nav .nav-link.active::after {
+    width: 100%; /* ANCHO 100% = Visible */
+}
+
+/* Opcional: Asegurarnos de que el texto también se ponga dorado */
+.header-main .navbar-nav .nav-link:hover,
+.header-main .navbar-nav .nav-link.active {
+    color: var(--dorado, #CBA865);
+}
+
+/* ============================================
+   2. FLECHA "VOLVER ARRIBA" (Scroll-to-Top)
+   ============================================ */
+.scroll-to-top-btn {
+    position: fixed; /* Se queda pegada en la pantalla */
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    
+    /* Tu diseño: Círculo negro, flecha blanca */
+    background-color: #000000;
+    color: #FFFFFF;
+    
+    width: 50px;
+    height: 50px;
+    /* Círculo perfecto */
+    
+    /* Para centrar la flecha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 1.2rem;
+    text-decoration: none;
+    
+    /* Oculta por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* Efecto de "subida" */
+    transition: all 0.3s ease;
+}
+
+/* Clase .show que agregará el JavaScript */
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Estado visible */
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #333; /* Un gris oscuro en hover */
+    color: #FFFFFF;
+}
+
+/* ============================================
+   ESTILOS PARA ICONOS DENTRO DEL FORMULARIO
+   ============================================ */
+
+/* 1. El 'wrapper' (caja) que envuelve el ícono y el input */
+.input-icon-wrapper {
+    position: relative; /* El contenedor es el "jefe" */
+}
+
+/* 2. El ícono */
+.form-icon {
+    position: absolute; /* El ícono "flota" */
+    left: 20px;         /* Lo separamos 20px de la izquierda */
+    top: 50%;           /* Lo centramos verticalmente */
+    transform: translateY(-50%);
+    color: #999;       /* Un color gris sutil, como en la foto */
+    font-size: 0.9rem;
+    z-index: 3;       /* Nos aseguramos que esté visible */
+}
+
+/* 3. ¡LA MAGIA! Le damos espacio al texto del input */
+.form-control-custom {
+    /* Le decimos al texto que EMPIECE más a la derecha,
+       para no encimarse con el ícono */
+    padding-left: 50px !important; 
+}
+
+/* 4. Ajuste especial para el ícono del 'textarea' */
+.form-icon.icon-textarea {
+    top: 22px; /* Lo alineamos arriba, no al centro */
+    transform: translateY(0);
+}

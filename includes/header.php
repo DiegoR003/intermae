@@ -25,8 +25,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+
+
+    
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/servicios.css">
+    <link rel="stylesheet" href="assets/css/nosotros.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -58,27 +64,35 @@
                 </button>
                 
                 <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">INICIO</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="servicios.php" id="navbarServicios"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        SERVICIOS
-                       </a>
-                       <ul class="dropdown-menu" aria-labelledby="navbarServicios">
-                       <li><a class="dropdown-item" href="servicios.php#transporte">TRANSPORTE</a></li>
-                       <li><a class="dropdown-item" href="servicios.php#patio-almacen">PATIO & ALMACÉN</a></li>
-                       <li><a class="dropdown-item" href="servicios.php#seguridad">SEGURIDAD & MONITOREO</a></li>
-                       </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.php">NOSOTROS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.php">CONTACTO</a>
-                        </li>
-                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    
+    <li class="nav-item">
+        <a class="nav-link <?php echo ($tituloPagina == 'Inicio') ? 'active' : ''; ?>" 
+           href="index.php">INICIO</a>
+    </li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle <?php echo ($tituloPagina == 'Servicios') ? 'active' : ''; ?>" 
+           href="servicios.php" id="navbarDropdownServicios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            SERVICIOS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownServicios">
+            <li><a class="dropdown-item" href="transporte.php">TRANSPORTE</a></li>
+            <li><a class="dropdown-item" href="patio-almacen.php">PATIO & ALMACÉN</a></li>
+            <li><a class="dropdown-item" href="seguridad.php">SEGURIDAD & MONITOREO</a></li>
+        </ul>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link <?php echo ($tituloPagina == 'Nosotros') ? 'active' : ''; ?>" 
+           href="nosotros.php">NOSOTROS</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link <?php echo ($tituloPagina == 'Contacto') ? 'active' : ''; ?>" 
+           href="contacto.php">CONTACTO</a>
+    </li>
+</ul>
                     <!--<span class="header-search"><i class="fas fa-search"></i></span>-->
                 </div>
             </div>

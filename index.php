@@ -1,5 +1,5 @@
 <?php 
-    $tituloPagina = "Inicio";
+    $tituloPagina = "INICIO";
     include 'includes/header.php'; 
 ?>
 
@@ -26,7 +26,7 @@
 
             <!-- BOTONES animados -->
             <div class="hero-buttons hero-action-buttons">
-              <a class="btn btn-hero-red me-3" href="servicios.php">Nuestros Servicios</a>
+              <a class="btn btn-hero-red me-3" href="#servicios">Nuestros Servicios</a>
               <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
             </div>
 
@@ -52,7 +52,7 @@
 
             <!-- BOTONES animados -->
             <div class="hero-buttons hero-action-buttons">
-              <a class="btn btn-hero-red me-3" href="servicios.php#patio">Ver Patio &amp; Almacén</a>
+              <a class="btn btn-hero-red me-3" href="patio-almacen.php">Ver Patio &amp; Almacén</a>
               <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
             </div>
 
@@ -78,7 +78,7 @@
 
             <!-- BOTONES animados -->
             <div class="hero-buttons hero-action-buttons">
-              <a class="btn btn-hero-red me-3" href="servicios.php#custodias">Ver Custodias</a>
+              <a class="btn btn-hero-red me-3" href="seguridad.php">Ver Más</a>
               <a class="btn btn-hero-red-outline" href="contacto.php">Cotizar Ahora</a>
             </div>
 
@@ -109,7 +109,7 @@
 
 
 <!-- Sección de Servicios Cards (Superpuestas) -->
-<section class="services-overlap-section">
+<section class="services-overlap-section" id="servicios">
     <div class="container">
         <div class="row g-4">
             <!-- Card 1: Logistic Trucking Services -->
@@ -118,7 +118,7 @@
                     <div class="service-image-container">
                         <img src="assets/img/fletes/104.jpg" alt="Transporte Terrestre">
                         <div class="service-hover-overlay">
-                            <a href="servicios.php#transporte" class="read-more-btn"> LEER MÁS</a>
+                            <a href="transporte.php" class="read-more-btn"> LEER MÁS</a>
                         </div>
                     </div>
                     <div class="service-content-box">
@@ -135,7 +135,7 @@
                     <div class="service-image-container">
                         <img src="assets/img/patio-contenedor/118.jpg" alt="Transporte Marítimo">
                         <div class="service-hover-overlay">
-                            <a href="servicios.php#contenedores" class="read-more-btn">LEER MÁS</a>
+                            <a href="patio-almacen.php" class="read-more-btn">LEER MÁS</a>
                         </div>
                     </div>
                     <div class="service-content-box">
@@ -152,7 +152,7 @@
                     <div class="service-image-container">
                         <img src="assets/img/custodia-monitoreo/1.png" alt="Transporte Aéreo">
                         <div class="service-hover-overlay">
-                            <a href="servicios.php#custodia" class="read-more-btn">LEER MÁS</a>
+                            <a href="seguridad.php" class="read-more-btn">LEER MÁS</a>
                         </div>
                     </div>
                     <div class="service-content-box">
@@ -167,36 +167,46 @@
 </section>
 
 <!-- Sección de Estadísticas -->
-<section class="statistics-dark-section">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-0">
-                <div class="stat-block-item">
-                    <div class="stat-big-number" data-count="12250">0</div>
-                    <div class="stat-description">PROYECTOS COMPLETADOS</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-0">
-                <div class="stat-block-item">
-                    <div class="stat-big-number" data-count="250">0</div>
-                    <div class="stat-description">SUCURSALES OFICIALES</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6">
-                <div class="stat-block-item">
-                    <div class="stat-big-number" data-count="13">0</div>
-                    <div class="stat-description">ESTADOS CUBERTOS</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6">
-                <div class="stat-block-item">
-                    <div class="stat-big-number" data-count="8570">0</div>
-                    <div class="stat-description">CLIENTES SATISFECHOS</div>
-                </div>
-            </div>
+<section class="metricas-intermae wow fadeInUp" data-wow-delay="0.2s">
+  <div class="container">
+    <div class="row text-center">
+
+      <!-- Métrica 1 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="metric-box">
+          <h3 class="metric-number"><span class="contador" data-target="10">0</span>+</h3>
+          <p class="metric-text">Años operando</p>
         </div>
+      </div>
+
+      <!-- Métrica 2 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="metric-box">
+          <h3 class="metric-number"><span class="contador" data-target="8000">0</span>+</h3>
+          <p class="metric-text">m² patio & almacén</p>
+        </div>
+      </div>
+
+      <!-- Métrica 3 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="metric-box">
+          <h3 class="metric-number"><span class="contador" data-target="25000">0</span>+</h3>
+          <p class="metric-text">maniobras/año*</p>
+        </div>
+      </div>
+
+      <!-- Métrica 4 -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="metric-box">
+          <h3 class="metric-number"><span class="contador" data-target="32">0</span></h3>
+          <p class="metric-text">Estados con cobertura</p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
 
 <!-- Sección Características -->
 <section class="seccion-blanca py-5">
@@ -334,6 +344,40 @@
         </div>
     </div>
 </section>
+
+<script>
+  const counters = document.querySelectorAll('.contador');
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  };
+
+  const section = document.querySelector('.metricas-intermae');
+  let started = false;
+
+  window.addEventListener('scroll', () => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100 && !started) {
+      started = true;
+      animateCounters();
+    }
+  });
+</script>
+
 
 
 
